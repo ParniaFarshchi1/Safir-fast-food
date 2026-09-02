@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: saye;
+}
+@font-face {
+  font-family: saye;
+  src: url(../font/Font-Bold-f954571d.ttf);
+}
+/* **************dashboard tab********************** */
+.dashboard {
+  background: #026643;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 102, 67, 1) 0%,
+    rgba(2, 102, 67, 1) 21%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  display: flex;
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  font-family: saye;
+}
+.navbar {
+  background: #0001008e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 250px;
+  box-shadow: 0px 0px 10px black;
+}
+.navbar h2 {
+  padding: 10px 20px;
+}
+.navbar .pannel-items {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .pannel-items .logout {
+  color: red;
+}
+.navbar .pannel-items button {
+  width: 250px;
+  border: none;
+  background: rgba(0, 87, 71, 0.388);
+  border-bottom: 3px solid #206b3d;
+  padding: 16px;
+  cursor: pointer;
+  color: white;
+  font-family: saye;
+}
+/* ***************************hover************************** */
+.navbar .pannel-items .logout:hover {
+  background: rgba(255, 0, 0, 0.547);
+  color: white;
+}
+.navbar .pannel-items button:hover {
+  background: #004930;
+}
+.navbar .pannel-items button:focus {
+  background: #004930;
+}
+.create:hover {
+  color: white;
+  background: #2c483e;
+}
+.close-button:hover,
+.close-button:focus {
+  color: #026643;
+  text-decoration: none;
+}
+.pannel:hover {
+  color: #666;
+}
+nav .item :hover {
+  background-color: rgb(255, 128, 0);
+  color: #212121;
+  box-shadow: 0px 0px 25px 10px #000 inset;
+}
+.div-item :hover {
+  background: #02664374;
+  transform: scale(105%);
+  transition: all 0.3s;
+}
+
+.item-details i :hover {
+  color: white;
+  background-color: #026643;
+}
+/* ************************pannel*********************** */
+#panel {
+  margin: 2% auto;
+}
+#panel h3 {
+  margin-bottom: 30px;
+}
+#panel .panel-section .categories-table,
+.panel-section .posts-table {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px black;
+}
+#panel .panel-section .posts-table {
+  width: 900px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px black;
+  border: none;
+}
+.posts-table thead tr th:last-child {
+  width: 180px;
+}
+thead th:first-child {
+  border-top-left-radius: 20px;
+}
+thead th:last-child {
+  border-top-right-radius: 20px;
+}
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+#panel .panel-section thead tr {
+  height: 50px;
+  background-color: #206b3d;
+  border-collapse: collapse;
+}
+
+.panel-section tbody tr td {
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+.panel-section tr:nth-child(even) {
+  background-color: #568c6b;
+}
+.panel-section tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+#panel .panel-section h3 {
+  color: white;
+}
+.panel-section .categories-table tbody tr td button {
+  padding: 3px 7px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #0a91a5;
+}
+.panel-section .posts-table tbody tr td button {
+  padding: 3px 7px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #0a91a5;
+}
+.panel-section tbody tr td #delete {
+  background-color: rgb(193, 0, 0);
+}
+.panel-section tbody tr td #status {
+  background-color: yellow;
+  color: #000;
+}
+.panel-section tbody tr td #edit {
+  background-color: #0a91a5;
+  color: #000;
+}
+.create {
+  background: hsl(159, 54%, 57%);
+  color: white;
+  z-index: 1111;
+  display: block;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 20px;
+}
+button {
+  cursor: pointer;
+}
+/* ***************************pup up add item*********************************** */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.popup-box {
+  background-color: #2c483e;
+  font-family: saye;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.popup-box h3 {
+  color: white;
+}
+.popup-box input,
+textarea,
+select {
+  background-color: #99d5bf;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 6px;
+}
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.popup-box button {
+  background: #0f8d3f;
+  border: none;
+  padding: 5px 10px;
+  font-family: saye;
+  border-radius: 10px;
+}
+.popup-box .exitbtn {
+  background-color: red;
+}
+
+/* ***************************Responsive*************************** */
+
+/*******************************tablet******************************* */
+
+@media (max-width: 1024px) {
+
+  .navbar {
+    width: 200px;
+  }
+
+  .navbar .pannel-items button {
+    width: 200px;
+  }
+
+  #panel {
+    width: calc(100% - 200px);
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  #panel .panel-section .categories-table {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #panel .panel-section .posts-table {
+    width: 100%;
+    min-width: 750px;
+  }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+
+/* ************************mobile************************* */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    width: 100%;
+    min-height: auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .navbar h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .navbar .pannel-items {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: stretch;
+  }
+
+  .navbar .pannel-items button {
+    width: 100%;
+    flex: 1;
+
+    padding: 13px 5px;
+
+    font-size: 14px;
+  }
+
+  .navbar .pannel-items .logout {
+    margin-top: 0;
+  }
+
+
+  /* ---------- PANEL ---------- */
+
+  #panel {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 25px 15px;
+
+    box-sizing: border-box;
+  }
+
+  #panel h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+
+  /* ---------- TABLE ---------- */
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #panel .panel-section .categories-table {
+    width: 500px;
+  }
+
+  #panel .panel-section .posts-table {
+    width: 900px;
+  }
+}
+
+
+/* *******************************small mobile****************************** */
+
+@media (max-width: 480px) {
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar h2 {
+    font-size: 22px;
+    padding: 12px;
+  }
+
+  .navbar .pannel-items button {
+    padding: 11px 4px;
+    font-size: 13px;
+  }
+
+
+  /* ---------- PANEL ---------- */
+
+  #panel {
+    padding: 20px 10px;
+  }
+
+  #panel h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+
+  /* ---------- CREATE ---------- */
+
+  .create {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* ---------- TABLE ---------- */
+
+  .table-wrapper {
+    border-radius: 15px;
+  }
+
+  #panel .panel-section .categories-table {
+    width: 500px;
+  }
+
+  #panel .panel-section .posts-table {
+    width: 900px;
+  }
+
+
+  /* ---------- TABLE BUTTONS ---------- */
+
+  .panel-section tbody tr td button {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+
+  /* ---------- POPUP ---------- */
+
+  .popup {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .popup-box {
+    width: 100%;
+    max-width: 350px;
+
+    box-sizing: border-box;
+
+    padding: 18px;
+  }
+
+  .popup-box input,
+  .popup-box textarea,
+  .popup-box select {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+}
+
+
+/* *********************************** very small mobile ***************************************8*/
+
+@media (max-width: 360px) {
+
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .navbar .pannel-items button {
+    font-size: 12px;
+    padding: 10px 2px;
+  }
+
+  #panel {
+    padding: 15px 8px;
+  }
+
+  #panel h3 {
+    font-size: 18px;
+  }
+
+  .popup-box {
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+

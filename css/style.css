@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  width: 100%;
+  background-color: #020202;
+  font-family: saye;
+}
+header {
+  padding: 1.25rem 5%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+header .resturant-name h1 {
+  color: #026643;
+  font-family: "saye";
+  text-shadow: 0px 0px 40px #585757;
+}
+header .logo img {
+  width: 100px;
+}
+header .pannel {
+  color: #026643;
+  font-size: 38px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+nav {
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  background-color: #020202;
+  z-index: 99;
+}
+
+nav ul {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  white-space: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-shadow: 0px 0px 20px 0px #026643;
+}
+
+nav ul::-webkit-scrollbar {
+  display: none;
+}
+
+nav ul li.item {
+  flex-shrink: 0;
+  margin: 10px;
+  display: flex;
+  list-style: none;
+}
+
+nav ul .item a {
+  font-family: saye;
+  box-shadow: 0px 0px 4px 0px #666;
+  border-radius: 40px;
+  padding: 20px 30px;
+  list-style: none;
+  color: rgb(255, 128, 0);
+  font-size: x-large;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+/* ********************لیست غذاها******************** */
+ul {
+  padding: 1.25rem 5%;
+  display: grid;
+  gap: 10px;
+}
+.food-item {
+  padding: 2rem;
+  gap: 2rem;
+  list-style: none;
+  box-shadow: 0px 0px 20px 0px #026643;
+  border-radius: 180px 10px 10px 180px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 80%;
+}
+section h2 {
+  white-space: nowrap;
+  color: #026643;
+  padding: 1.25rem 5%;
+  direction: rtl;
+  font-size: xx-large;
+}
+.food-item .item-pic {
+  width: 200px;
+  height: 150px;
+  border-radius: 130px;
+  overflow: hidden;
+}
+.food-item .item-pic img {
+  width: 100%;
+  height: 100%;
+}
+.food-item .item-info {
+  width: 21rem;
+}
+.food-item .item-info h3 {
+  color: rgb(255, 128, 0);
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+.food-item .item-info span {
+  color: white;
+  font-size: x-large;
+  display: flex;
+  direction: rtl;
+  margin-top: 35px;
+}
+.food-item p {
+  color: #666;
+  font-size: small;
+  direction: rtl;
+}
+@font-face {
+  font-family: saye;
+  src: url(../font/Font-Bold-f954571d.ttf);
+}
+
+/* ******************footer******************* */
+footer {
+  padding: 20px 70px;
+  margin-top: 60px;
+  height: 200px;
+  background-color: #1e1d1d;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-family: safir;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+}
+/* ***************************log in***************************** */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.774);
+}
+
+.modal-content {
+  background: #026643;
+  background: linear-gradient(
+    121deg,
+    rgba(2, 102, 67, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  height: 60%;
+  max-height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 0px 15px #026643;
+  text-align: center;
+  position: relative;
+}
+.modal-content h2 {
+  color: #026643;
+  margin-top: 20px;
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.modal-content input {
+  width: 70%;
+  max-width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  text-align: start;
+  background: #0266439c;
+  outline: none;
+}
+.modal-content input:focus {
+  background: #026643;
+  border: 2px solid #004930;
+}
+.modal-content form button {
+  color: white;
+  background: #026643;
+  padding: 7px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+.modal-content p {
+  color: red;
+  margin-top: 10px;
+}
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* **************dashboard tab********************** */
+.dashboard {
+  background: #026643;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 102, 67, 1) 0%,
+    rgba(2, 102, 67, 1) 21%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  display: flex;
+  height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  font-family: saye;
+}
+.navbar {
+  background: #0001008e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 250px;
+  box-shadow: 0px 0px 10px black;
+}
+.navbar h2 {
+  padding: 10px 20px;
+}
+.navbar .pannel-items {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .pannel-items .logout {
+  color: red;
+}
+.navbar .pannel-items button {
+  width: 250px;
+  border: none;
+  background: rgba(0, 87, 71, 0.388);
+  border-bottom: 3px solid #206b3d;
+  padding: 16px;
+  cursor: pointer;
+  color: white;
+  font-family: saye;
+}
+/* ***************************hover************************** */
+.navbar .pannel-items .logout:hover {
+  background: rgba(255, 0, 0, 0.547);
+  color: white;
+}
+.navbar .pannel-items button:hover {
+  background: #004930;
+}
+.navbar .pannel-items button:focus {
+  background: #004930;
+}
+.create:hover {
+  color: white;
+  background: #2c483e;
+}
+.close-button:hover,
+.close-button:focus {
+  color: #026643;
+  text-decoration: none;
+}
+.pannel:hover {
+  color: #666;
+}
+nav .item :hover {
+  background-color: rgb(255, 128, 0);
+  color: #212121;
+  box-shadow: 0px 0px 25px 10px #000 inset;
+}
+.div-item :hover {
+  background: #02664374;
+  transform: scale(105%);
+  transition: all 0.3s;
+}
+
+.item-details i :hover {
+  color: white;
+  background-color: #026643;
+}
+/* ************************pannel*********************** */
+#panel {
+  margin: 2% auto;
+}
+#panel h3 {
+  margin-bottom: 30px;
+}
+#panel .panel-section .categories-table,
+.panel-section .posts-table {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px black;
+}
+#panel .panel-section .posts-table {
+  width: 900px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px black;
+  border: none;
+}
+.posts-table thead tr th:last-child {
+  width: 180px;
+}
+thead th:first-child {
+  border-top-left-radius: 20px;
+}
+thead th:last-child {
+  border-top-right-radius: 20px;
+}
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+#panel .panel-section thead tr {
+  height: 50px;
+  background-color: #206b3d;
+  border-collapse: collapse;
+}
+
+.panel-section tbody tr td {
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+.panel-section tr:nth-child(even) {
+  background-color: #568c6b;
+}
+.panel-section tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+#panel .panel-section h3 {
+  color: white;
+}
+.panel-section .categories-table tbody tr td button {
+  padding: 3px 7px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #0a91a5;
+}
+.panel-section .posts-table tbody tr td button {
+  padding: 3px 7px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #0a91a5;
+}
+.panel-section tbody tr td #delete {
+  background-color: rgb(193, 0, 0);
+}
+.panel-section tbody tr td #status {
+  background-color: yellow;
+  color: #000;
+}
+.panel-section tbody tr td #edit {
+  background-color: #0a91a5;
+  color: #000;
+}
+
+.create {
+  background: hsl(159, 54%, 57%);
+  color: white;
+  z-index: 1111;
+  display: block;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 20px;
+}
+button {
+  cursor: pointer;
+}
+/* ***************************pup up add item*********************************** */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.popup-box {
+  background-color: #2c483e;
+  font-family: saye;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.popup-box h3 {
+  color: white;
+}
+.popup-box input,
+textarea,
+select {
+  background-color: #99d5bf;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 6px;
+}
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.popup-box button {
+  background: #0f8d3f;
+  border: none;
+  padding: 5px 10px;
+  font-family: saye;
+  border-radius: 10px;
+}
+.popup-box .exitbtn {
+  background-color: red;
+}
+/* ***********************responsive*********************** */
+
+/* موبایل */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .logo img {
+    width: 80px;
+  }
+
+  nav ul {
+    height: auto;
+    gap: 5px;
+    height: 70px;
+  }
+
+  nav ul li.item a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+  .food-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 180px 10px 10px 180px;
+  }
+
+  .food-item .item-pic {
+    width: 80%;
+    height: auto;
+    border-radius: 21rem;
+    object-fit: cover;
+  }
+  .food-item .item-info {
+    height: auto;
+    padding: 10px;
+    width: auto;
+  }
+
+  .food-item .item-info h3 {
+    font-size: large;
+    margin-bottom: 8px;
+  }
+
+  .food-item .item-info span {
+    font-size: large;
+    margin-top: 15px;
+  }
+
+  .food-item p {
+    font-size: x-small;
+    padding: 0 10px;
+    direction: rtl;
+  }
+}
+
+/*  تبلت */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  header .logo img {
+    width: 80px;
+  }
+
+  nav ul {
+    height: auto;
+    gap: 5px;
+    height: 70px;
+  }
+
+  nav ul li.item a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+  .food-item {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .food-item .item-pic {
+    width: 160px;
+    height: 120px;
+  }
+}

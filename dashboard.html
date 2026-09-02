@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>پنل مدیریت</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- ---------------------navbar---------------------- -->
+      <header class="navbar">
+        <div class="navbar-brand">
+          <h2>Panel</h2>
+        </div>
+        <nav class="pannel-items">
+          <button onclick="showSection('categories')">دسته بندی</button>
+          <button onclick="showSection('items')">آیتم‌ها</button>
+          <button class="logout" onclick="logout()">Exit</button>
+        </nav>
+      </header>
+<!-- ---------------------------------main---------------------------------------- -->
+      <main id="panel">
+        <!-- ----------------------مدیریت دسته ها------------------------ -->
+        <section id="categories" class="panel-section">
+          <div class="section-header">
+
+            <div>
+              <h3>مدیریت دسته‌ها</h3>
+            </div>
+            
+            <button id="create-categories" class="create">Create</button>
+          </div>
+          <div class="table-wrapper">
+
+            <table class="categories-table">
+              <thead>
+                <tr>
+                  <th>نام دسته</th>
+                  <th>وضعیت</th>
+                  <th>تنظیمات</th>
+                </tr>
+              </thead>
+              <tbody id="cat-list"></tbody>
+            </table>
+          </div>
+        </section>
+        <!-- -------------------------مدیریت ایتم ها----------------------- -->
+        <section id="items" class="panel-section" style="display: none">
+          <div class="section-header">
+
+            <div>
+              <h3>مدیریت آیتم‌ها</h3>
+            </div>
+            
+            <button id="create-item" class="create">Create</button>
+          </div>
+          <div class="table-wrapper">
+
+            <table class="posts-table">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>عکس</th>
+                  <th>عنوان</th>
+                  <th>توضیحات</th>
+                  <th>قیمت</th>
+                  <th>وضعیت</th>
+                  <th>تنظیمات</th>
+                </tr>
+              </thead>
+              <tbody id="item-list"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

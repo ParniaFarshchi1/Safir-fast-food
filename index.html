@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu">
+      <header>
+        <div class="resturant-name">
+          <h1>ســفــیــــر</h1>
+        </div>
+        <div class="logo">
+          <img src="img/logoo.jpg" alt="" />
+        </div>
+
+        <button id="adminPanelBtn" class="pannel">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- پاپ‌آپ لاگین (Modal) -->
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close-button" onclick="closeLoginModal()"
+              >&times;</span
+            >
+            <h2>Log in</h2>
+            <form id="loginForm">
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+              <button type="submit">Login</button>
+            </form>
+            <p id="hint" class="hint"></p>
+          </div>
+        </div>
+      </header>
+      <nav dir="rtl">
+        <ul>
+          <li class="item">
+            <a href="#pizza"
+              >پیتزا امریکایی <i class="fa-solid fa-pizza-slice"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a href="#italipizza"
+              >پیتزا ایتالیایی <i class="fa-solid fa-pizza-slice"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a href="#sandwich">ساندویچ<i class="fa-solid fa-hotdog"></i></a>
+          </li>
+          <li class="item">
+            <a href="#burger">برگر <i class="fa-solid fa-burger"></i></a>
+          </li>
+          <li class="item">
+            <a href="#pish">پیش غذا <i class="fa-solid fa-salad"></i></a>
+          </li>
+          <li class="item">
+            <a href="#drink"
+              >نوشیدنی <i class="fa-solid fa-bottle-water"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a href="#sause">سس <i class="fa-solid fa-bottle-droplet"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <section id="pizza">
+          <h2>پیتزا امریکایی</h2>
+          <ul class="items-list" id="pizza-list">
+            <div class="div-item" data-target="pizza-roastbiff">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/pizza.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/pizza.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/pizza.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/pizza.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/pizza.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <section id="italipizza">
+          <h2>پیتزا ایتالیایی</h2>
+          <ul class="items-list" id="itallianpizza-list">
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/margarita.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/margarita.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/margarita.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/margarita.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/margarita.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <section id="sandwich">
+          <h2>ساندویچ</h2>
+
+          <ul class="items-list" id="sandwitch-list">
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sandwich.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sandwich.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sandwich.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sandwich.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sandwich.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <section id="burger">
+          <h2>برگر</h2>
+
+          <ul class="items-list" id="burger-list">
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/burger.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/burger.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/burger.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/burger.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/burger.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <section id="pish">
+          <h2>پیش غذا</h2>
+
+          <ul class="items-list" id="appetizer-list">
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/fries.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/fries.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/fries.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/fries.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/fries.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <section id="drink">
+          <h2>نوشیدنی</h2>
+          <ul class="items-list" id="drink-list">
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/soda.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/soda.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/soda.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+        <section id="sause">
+          <h2>سس</h2>
+          <ul class="items-list" id="sauce-list">
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sause.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sause.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+            <div class="div-item">
+              <li class="food-item">
+                <div class="item-pic">
+                  <img src="img/sause.jpg" alt="" />
+                </div>
+                <div class="item-info">
+                  <h3>پیتزا رست بیف</h3>
+                  <p>
+                    خمیر ویژه آمریکایی 24 سانتی متر، گوشت رست شده، سس گوجه ای
+                    ویژه فرنو، پنیر موزارلا، قارچ، گوجه، فلفل دلمه ای، پنیر
+                    پیتزا
+                  </p>
+                  <span>150,000 تومان</span>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </section>
+      </main>
+      <footer dir="rtl">
+        <a href=""> <i class="fab fa-instagram"></i> instagram</a>
+        <a href=""> <i class="fas fa-phone"></i> 09122222222</a>
+        <a href=""> <i class="fas fa-user"></i> سازنده</a>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
