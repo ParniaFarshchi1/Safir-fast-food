@@ -41,6 +41,14 @@ Front-End Developer
 • Enable/disable category status
 • Popup forms for creating and editing content
 
+📸Screenshots
+### menu
+![Menu mobile](img/screenshot-menu.jpg) , (![Menu desktop](img/Screenshotmenu.png))
+### Admin Dashboard
+![Admin Dashboard mobile](img/dashboard.jpg) , (![Admin Item Dashboard desktop](img/Screenshot%202026-09-02%20162827.png)) , (![Admin Category Dashboard desktop](img/Screenshot%202026-09-02%20162839.png.png))
+### Log in
+![Menu mobile](img/screenshot-login.jpg)
+
 🚧 Project Status
 
 The front-end development and UI implementation were completed by me.
